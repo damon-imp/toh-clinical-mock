@@ -128,7 +128,7 @@ function QuizResult({ band, reset }) {
             </div>
             <p style={{ fontSize: 18, color: "var(--ink-soft)", lineHeight: 1.6, marginBottom: 36, maxWidth: 560 }}>{r.copy}</p>
             <div style={{ display: "flex", gap: 14, flexWrap: "wrap", marginBottom: 16 }}>
-              <BtnPrimary href="Contact.html">Book your free consult</BtnPrimary>
+              <BtnPrimary href="contact.html">Book your free consult</BtnPrimary>
               <BtnGhost onClick={reset} arrow={false}>Retake</BtnGhost>
             </div>
             <p style={{ fontSize: 12.5, color: "var(--ink-mute)", marginTop: 24, lineHeight: 1.6 }}>

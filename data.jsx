@@ -32,7 +32,7 @@ const SERVICES = [
     detail: "Comprehensive hormone panels (Total + Free T, E2, SHBG, DHEA, LH, FSH, thyroid). Physician-supervised TRT protocols when clinically indicated, monitored and adjusted to your labs.",
     image: IMG.exec,
     treats: ["Low energy & drive", "Strength & recovery", "Focus & motivation", "Sexual health"],
-    href: "Services.html#trt",
+    href: "services.html#trt",
   },
   {
     id: "peptides",
@@ -42,7 +42,7 @@ const SERVICES = [
     detail: "Sermorelin, BPC-157, Ipamorelin, NAD+, MOTS-c, TB-500. Prescribed in research-backed dosing windows, paired with your hormone protocol.",
     image: IMG.peptides,
     treats: ["Recovery & sleep", "Body composition", "Cognitive function", "Joint & tissue repair"],
-    href: "Services.html#peptides",
+    href: "services.html#peptides",
   },
   {
     id: "metabolic",
@@ -52,7 +52,7 @@ const SERVICES = [
     detail: "Tirzepatide, Semaglutide, and emerging Retatrutide programs for the man whose metabolism stopped cooperating. Paired with nutrition and metabolic monitoring.",
     image: IMG.metabolic,
     treats: ["Visceral fat reduction", "Insulin sensitivity", "Appetite regulation", "Sustained loss"],
-    href: "Services.html#metabolic",
+    href: "services.html#metabolic",
   },
   {
     id: "thyroid",
@@ -62,7 +62,7 @@ const SERVICES = [
     detail: "TSH, Free T3, Free T4, Reverse T3, antibodies. The thyroid axis is where 'I eat clean and train and still feel like garbage' usually hides.",
     image: IMG.trt,
     treats: ["Persistent fatigue", "Stubborn weight", "Brain fog", "Cold intolerance"],
-    href: "Services.html#thyroid",
+    href: "services.html#thyroid",
   },
   {
     id: "longevity",
@@ -72,7 +72,7 @@ const SERVICES = [
     detail: "NAD+, methylene blue, mitochondrial support, advanced biomarkers, and quarterly re-testing. For the man who wants to perform at 50 like he did at 30.",
     image: IMG.recovery,
     treats: ["Cellular energy", "Cognitive longevity", "Cardiovascular markers", "Healthspan"],
-    href: "Services.html#longevity",
+    href: "services.html#longevity",
   },
 ];
 

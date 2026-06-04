@@ -45,7 +45,7 @@ function ServicesPage() {
                   </div>
                 </Reveal>
                 <Reveal delay={200}>
-                  <BtnPrimary href="Assessment.html">See if this fits you</BtnPrimary>
+                  <BtnPrimary href="assessment.html">See if this fits you</BtnPrimary>
                 </Reveal>
               </div>
             </div>

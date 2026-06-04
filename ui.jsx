@@ -120,7 +120,7 @@ function OHMark({ size = 34, color = "var(--accent)" }) {
 
 function Logo({ inverse }) {
   return (
-    <a href="The Optimized Human.html" style={{ display: "inline-flex", alignItems: "center", gap: 12 }}>
+    <a href="index.html" style={{ display: "inline-flex", alignItems: "center", gap: 12 }}>
       <OHMark size={32} color={inverse ? "#C68CC2" : "var(--accent)"} />
       <span style={{
         fontFamily: "var(--display)", fontWeight: 700, fontSize: 17, letterSpacing: "-0.01em",

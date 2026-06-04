@@ -17,12 +17,12 @@ function applyTheme(t) {
 }
 
 const MENU = [
-  { label: "Services",      href: "Services.html" },
-  { label: "Assessment",    href: "Assessment.html" },
-  { label: "The Team",      href: "Team.html" },
-  { label: "Member Portal", href: "Member Portal.html" },
-  { label: "Journal",       href: "Journal.html" },
-  { label: "Contact",       href: "Contact.html" },
+  { label: "Services",      href: "services.html" },
+  { label: "Assessment",    href: "assessment.html" },
+  { label: "The Team",      href: "team.html" },
+  { label: "Member Portal", href: "member-portal.html" },
+  { label: "Journal",       href: "journal.html" },
+  { label: "Contact",       href: "contact.html" },
 ];
 
 function AnnouncementBar() {
@@ -82,7 +82,7 @@ function Nav({ current }) {
           })}
         </nav>
         <div className="nav-cta-desktop" style={{ display: "flex", alignItems: "center", gap: 18 }}>
-          <BtnPrimary href="Contact.html" style={{ padding: "10px 18px", fontSize: 13 }}>Book consult</BtnPrimary>
+          <BtnPrimary href="contact.html" style={{ padding: "10px 18px", fontSize: 13 }}>Book consult</BtnPrimary>
         </div>
         <button className="nav-burger" aria-label="Menu" onClick={() => setOpen(!open)} style={{
           display: "none", appearance: "none", background: "transparent", border: "none",
@@ -107,7 +107,7 @@ function Nav({ current }) {
               );
             })}
             <div style={{ padding: "20px 40px 0" }}>
-              <BtnPrimary href="Contact.html" style={{ width: "100%", textAlign: "center", padding: "14px 18px", fontSize: 15, display: "block", justifyContent: "center" }}>Book consult</BtnPrimary>
+              <BtnPrimary href="contact.html" style={{ width: "100%", textAlign: "center", padding: "14px 18px", fontSize: 15, display: "block", justifyContent: "center" }}>Book consult</BtnPrimary>
             </div>
           </nav>
         </div>
@@ -158,7 +158,7 @@ function CTABand() {
                 A 15-minute consult, no card on file. We'll review your symptoms, walk you through what a full panel measures, and tell you straight whether we're the right fit.
               </p>
               <div style={{ display: "flex", gap: 14, alignItems: "center", flexWrap: "wrap" }}>
-                <BtnPrimary href="Contact.html" style={{ background: "var(--green)", color: "var(--ink)" }}
+                <BtnPrimary href="contact.html" style={{ background: "var(--green)", color: "var(--ink)" }}
                   onMouseEnter={(e) => { e.currentTarget.style.background = "var(--green-2)"; e.currentTarget.style.color = "#FFFFFF"; }}
                   onMouseLeave={(e) => { e.currentTarget.style.background = "var(--green)"; e.currentTarget.style.color = "var(--ink)"; }}
                 >Book free consult</BtnPrimary>
@@ -225,7 +225,7 @@ function StickyConsultPill() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   return (
-    <a href="Contact.html" style={{
+    <a href="contact.html" style={{
       position: "fixed", bottom: 24, right: 24, zIndex: 60,
       display: "inline-flex", alignItems: "center", gap: 10,
       background: "var(--accent)", color: "#FFFFFF", fontFamily: "var(--sans)", fontWeight: 600, fontSize: 14,

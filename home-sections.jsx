@@ -22,8 +22,8 @@ function Hero() {
               </p>
             </Reveal>
             <Reveal delay={200} style={{ display: "flex", gap: 14, alignItems: "center", flexWrap: "wrap", marginBottom: 48 }}>
-              <BtnPrimary href="Assessment.html">Take the 2-minute assessment</BtnPrimary>
-              <BtnGhost href="Contact.html">Book a consult</BtnGhost>
+              <BtnPrimary href="assessment.html">Take the 2-minute assessment</BtnPrimary>
+              <BtnGhost href="contact.html">Book a consult</BtnGhost>
             </Reveal>
 
             <Reveal delay={280}>
@@ -213,7 +213,7 @@ function QuizTeaser() {
               <p style={{ fontSize: 16, color: "var(--ink-soft)", maxWidth: 520, marginBottom: 28 }}>
                 No email wall to see your result. If it points to something worth testing, we'll tell you. If it doesn't, we'll tell you that too.
               </p>
-              <BtnPrimary href="Assessment.html">Start the assessment</BtnPrimary>
+              <BtnPrimary href="assessment.html">Start the assessment</BtnPrimary>
             </div>
             <div style={{ display: "flex", justifyContent: "center" }}>
               <div style={{ position: "relative", width: 160, height: 160 }}>

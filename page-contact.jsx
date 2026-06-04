@@ -67,7 +67,7 @@ function ContactPage() {
                   <p style={{ fontSize: 16.5, color: "var(--ink-soft)", lineHeight: 1.6 }}>
                     We'll reach out within one business day to get your free consult booked. In the meantime, take the assessment if you haven't, it gives your provider a head start.
                   </p>
-                  <div style={{ marginTop: 28 }}><BtnGhost href="Assessment.html">Take the assessment</BtnGhost></div>
+                  <div style={{ marginTop: 28 }}><BtnGhost href="assessment.html">Take the assessment</BtnGhost></div>
                 </div>
               )}
             </Reveal>

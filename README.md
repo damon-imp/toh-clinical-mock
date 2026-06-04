@@ -8,22 +8,22 @@ Reference only, to be staged OUTSIDE the current live site. Not production, not 
 Forms, login, and the portal are front-end mock interactions (no data is sent or stored).
 
 ## Pages
-- **The Optimized Human.html** — homepage (hero, services + symptom filter, assessment teaser, approach, peptides, members, CTA)
-- **Services.html** — five service pillars in detail + pricing structure
-- **Assessment.html** — interactive 7-question symptom quiz with scored result
-- **Team.html** — founder + clinical providers, and how the MSO/clinician split works
-- **Member Portal.html** — login → tabbed dashboard (labs, protocol, education, messages)
-- **Journal.html** — article index with category filter
-- **Contact.html** — consult request form
+- **index.html** — homepage (hero, services + symptom filter, assessment teaser, approach, peptides, members, CTA)
+- **services.html** — five service pillars in detail + pricing structure
+- **assessment.html** — interactive 7-question symptom quiz with scored result
+- **team.html** — founder + clinical providers, and how the MSO/clinician split works
+- **member-portal.html** — login → tabbed dashboard (labs, protocol, education, messages)
+- **journal.html** — article index with category filter
+- **contact.html** — consult request form
 
 ## How to run
 It's a static site using React + Babel loaded from CDN (unpkg). Two options:
 
-1. **Open directly** — double-click `The Optimized Human.html`. (Some browsers block local `file://`
+1. **Open directly** — double-click `index.html`. (Some browsers block local `file://`
    loading of the `.jsx` files; if pages render blank, use option 2.)
 2. **Serve locally** (recommended) — from this folder run:
    `python3 -m http.server 8000`
-   then open `http://localhost:8000/The Optimized Human.html`
+   then open `http://localhost:8000/index.html`
 
 Requires an internet connection (React/Babel load from CDN).
 
