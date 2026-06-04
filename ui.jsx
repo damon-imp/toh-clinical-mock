@@ -104,24 +104,18 @@ function Tick() {
   );
 }
 
-// The TOH "OH" mark, drawn as inline SVG so the mock is self-contained.
-function OHMark({ size = 34, color = "var(--accent)" }) {
+// The real TOH "OH" mark (brand asset: logo-mark.png).
+function OHMark({ size = 34 }) {
   return (
-    <svg width={size} height={size * 0.86} viewBox="0 0 70 60" fill="none" aria-hidden="true">
-      {/* O */}
-      <rect x="2" y="2" width="34" height="56" rx="17" stroke={color} strokeWidth="11" />
-      {/* H stem + the cut foot */}
-      <path d="M52 2 V58" stroke={color} strokeWidth="11" strokeLinecap="butt" />
-      <path d="M52 30 L36 30 L36 44 Z" fill={color} />
-      <path d="M36 30 H52" stroke={color} strokeWidth="11" />
-    </svg>
+    <img src="logo-mark.png" alt="The Optimized Human" aria-hidden="true"
+      style={{ height: size, width: "auto", display: "block" }} />
   );
 }
 
 function Logo({ inverse }) {
   return (
     <a href="index.html" style={{ display: "inline-flex", alignItems: "center", gap: 12 }}>
-      <OHMark size={32} color={inverse ? "#C68CC2" : "var(--accent)"} />
+      <OHMark size={30} />
       <span style={{
         fontFamily: "var(--display)", fontWeight: 700, fontSize: 17, letterSpacing: "-0.01em",
         color: inverse ? "#FFFFFF" : "var(--ink)", lineHeight: 1,

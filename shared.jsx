@@ -7,9 +7,9 @@ function applyTheme(t) {
   body.setAttribute("data-mode", t.mode === "dark" ? "dark" : "light");
   if (t.accentShade) {
     const map = {
-      orchid:  { "--accent": "#AC66A7", "--accent-2": "#8E4F8A", "--accent-3": "#C68CC2", "--accent-tint": "#F3E9F2" },
-      plum:    { "--accent": "#8E4F8A", "--accent-2": "#6E3C6B", "--accent-3": "#AC66A7", "--accent-tint": "#EFE3EE" },
-      magenta: { "--accent": "#B5478F", "--accent-2": "#93396F", "--accent-3": "#D072AE", "--accent-tint": "#F7E5F0" },
+      orchid:  { "--accent": "#E352FE", "--accent-2": "#C22FDE", "--accent-3": "#ED8AFE", "--accent-tint": "#FBE9FF" },
+      plum:    { "--accent": "#C22FDE", "--accent-2": "#9E1FB8", "--accent-3": "#E352FE", "--accent-tint": "#F6E0FB" },
+      magenta: { "--accent": "#E352FE", "--accent-2": "#C22FDE", "--accent-3": "#F0A3FF", "--accent-tint": "#FBE9FF" },
     };
     const set = map[t.accentShade] || map.orchid;
     Object.entries(set).forEach(([k, v]) => root.style.setProperty(k, v));
@@ -142,7 +142,7 @@ function CTABand() {
     <section style={{ position: "relative", padding: "120px 0", background: "var(--ink)", color: "#FFFFFF", overflow: "hidden" }}>
       <div style={{
         position: "absolute", right: "-12%", top: "-30%", width: 620, height: 620, borderRadius: "50%",
-        background: "radial-gradient(circle, rgba(172,102,167,0.35), transparent 65%)", pointerEvents: "none",
+        background: "radial-gradient(circle, rgba(227,82,254,0.38), transparent 65%)", pointerEvents: "none",
       }}/>
       <div className="wrap" style={{ position: "relative" }}>
         <Reveal><div className="eyebrow" style={{ color: "var(--green)", marginBottom: 28 }}>Begin</div></Reveal>

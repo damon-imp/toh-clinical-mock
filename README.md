@@ -1,7 +1,7 @@
 # The Optimized Human — Website Mock (v1)
 
 A multi-page, mobile-optimized mock of the TOH men's hormone optimization practice site.
-Apple-clean aesthetic, TOH brand (purple #AC66A7 accent, Outfit display), light-mode-first.
+Apple-clean aesthetic, TOH brand (purple #E352FE accent, Outfit display), light-mode-first.
 
 ## This is a staging mock
 Reference only, to be staged OUTSIDE the current live site. Not production, not wired to any backend.
