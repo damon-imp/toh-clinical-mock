@@ -104,10 +104,10 @@ function Tick() {
   );
 }
 
-// The real TOH "OH" mark (brand asset: logo-mark.png).
+// The real TOH "OH" mark (brand asset: logo-mark.svg, transparent vector).
 function OHMark({ size = 34 }) {
   return (
-    <img src="logo-mark.png" alt="The Optimized Human" aria-hidden="true"
+    <img src="logo-mark.svg" alt="The Optimized Human" aria-hidden="true"
       style={{ height: size, width: "auto", display: "block" }} />
   );
 }
