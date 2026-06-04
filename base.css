@@ -1,0 +1,189 @@
+/* base.css — shared styles across all TOH pages
+   Apple-calm structure, mapped to The Optimized Human brand.
+   Light-mode-first, single purple accent, restrained and clean. */
+
+:root {
+  /* Palette — Apple-calm neutrals, TOH purple as the single accent */
+  --bg: #FFFFFF;
+  --bg-2: #F6F4F7;        /* faint purple-tinted systemGray6 */
+  --bg-3: #ECE8EE;
+  --ink: #1A1A1A;         /* TOH near-black */
+  --ink-soft: #6E6E73;    /* secondary label */
+  --ink-mute: #A1A1A6;    /* tertiary label */
+  --accent: #AC66A7;      /* TOH purple — the single accent */
+  --accent-2: #8E4F8A;    /* darker purple for hover */
+  --accent-3: #C68CC2;    /* lighter purple */
+  --accent-tint: #F3E9F2; /* purple wash */
+  --green: #34D399;       /* functional success cue only */
+  --green-2: #1FA877;
+  --green-tint: #E2F5EC;
+  --rule: rgba(0, 0, 0, 0.09);
+  --rule-soft: rgba(0, 0, 0, 0.05);
+
+  /* Single soft shadow tier — Apple-style, subtle */
+  --shadow: 0 1px 2px rgba(0,0,0,0.04), 0 4px 16px rgba(0,0,0,0.06);
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-accent: 0 8px 30px rgba(172,102,167,0.18);
+
+  /* Radii */
+  --r-sm: 10px;
+  --r-md: 14px;
+  --r-lg: 18px;
+  --r-pill: 980px;
+
+  /* Typography — Outfit display (TOH brand), system body for Apple feel, JetBrains mono for data */
+  --display: 'Outfit', -apple-system, BlinkMacSystemFont, 'SF Pro Display', ui-sans-serif, system-ui, sans-serif;
+  --sans: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, 'SF Mono', monospace;
+  --display-weight: 600;
+  --display-tracking: -0.022em;
+
+  /* Scale */
+  --h1: clamp(40px, 5vw, 64px);
+  --h2: clamp(30px, 3.4vw, 44px);
+  --h3: clamp(22px, 2.2vw, 30px);
+}
+
+/* Display font toggle hooks retained (harmless if toggled) */
+body[data-display="slab"],
+body[data-display="grotesk"] {
+  --display: 'Outfit', -apple-system, BlinkMacSystemFont, ui-sans-serif, system-ui, sans-serif;
+  --display-weight: 700;
+  --display-tracking: -0.022em;
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+body { overflow-x: hidden; }
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; }
+img { display: block; max-width: 100%; }
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: var(--display-weight);
+  letter-spacing: var(--display-tracking);
+  line-height: 1.05;
+}
+p { margin: 0; }
+::selection { background: var(--accent); color: #FFFFFF; }
+
+/* Wrapper */
+.wrap { max-width: 1440px; margin: 0 auto; padding: 0 40px; }
+.wrap-tight { max-width: 1180px; margin: 0 auto; padding: 0 40px; }
+
+/* Eyebrow */
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--accent);
+}
+
+/* Rule */
+.rule { height: 1px; background: var(--rule); width: 100%; }
+
+/* Fade-up reveal */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 800ms cubic-bezier(0.2, 0.7, 0, 1),
+              transform 800ms cubic-bezier(0.2, 0.7, 0, 1);
+}
+.fade-up.in { opacity: 1; transform: translateY(0); }
+
+/* Image with subtle frame */
+.img-frame {
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-2);
+}
+.img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Dark mode */
+body[data-mode="dark"] {
+  --bg: #1A1A1A;
+  --bg-2: #222222;
+  --bg-3: #2A2A2A;
+  --ink: #F0EEF2;
+  --ink-soft: #B6B0BA;
+  --ink-mute: #79737E;
+  --accent: #C68CC2;
+  --accent-2: #D6A8D2;
+  --accent-tint: rgba(198, 140, 194, 0.15);
+  --green: #3FDCAA;
+  --green-tint: rgba(63, 220, 170, 0.15);
+  --rule: rgba(240, 238, 242, 0.14);
+  --rule-soft: rgba(240, 238, 242, 0.07);
+}
+
+/* ============================================================
+   MOBILE OPTIMIZATION LAYER
+   ============================================================ */
+
+@media (max-width: 920px) {
+  .nav-desktop { display: none !important; }
+  .nav-cta-desktop { display: none !important; }
+  .nav-burger { display: flex !important; }
+  .nav-wrap { grid-template-columns: auto auto !important; justify-content: space-between; padding: 14px 20px !important; }
+}
+
+@media (max-width: 720px) {
+  .wrap, .wrap-tight { padding: 0 20px !important; }
+}
+
+@media (max-width: 860px) {
+  [data-collapse="true"] { grid-template-columns: 1fr !important; }
+  .edu-grid { grid-template-columns: 1fr !important; }
+  .pharm-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 720px) {
+  .portal-tabs { overflow-x: auto !important; flex-wrap: nowrap !important; -webkit-overflow-scrolling: touch; scrollbar-width: none; margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; }
+  .portal-tabs::-webkit-scrollbar { display: none; }
+  .portal-tabs button { white-space: nowrap; flex-shrink: 0; }
+}
+
+@media (max-width: 860px) {
+  .lab-grid { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 560px) {
+  .lab-grid { grid-template-columns: 1fr !important; }
+}
+
+@media (max-width: 720px) {
+  section { padding-left: 0; padding-right: 0; }
+}
+
+@media (max-width: 560px) {
+  .tweaks-panel, [class*="tweaks"] { transform: scale(0.92); transform-origin: bottom right; }
+}
+
+@media (max-width: 560px) {
+  .announce { font-size: 10.5px !important; }
+  .appt-row { grid-template-columns: 1fr !important; gap: 12px !important; }
+}
+
+@media (max-width: 720px) {
+  .portal-switch { width: 100%; justify-content: stretch; }
+  .portal-switch button { flex: 1; padding-left: 0 !important; padding-right: 0 !important; }
+  .mlq-roster-head { display: none !important; }
+}
+@media (max-width: 560px) {
+  .mlq-roster-row { grid-template-columns: 1fr 1fr !important; gap: 6px !important; }
+}
